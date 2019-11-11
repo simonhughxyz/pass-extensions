@@ -1,2 +1,2 @@
 # pass-extensions
-Extension scripts for password-store
+Extension scripts for password-store.

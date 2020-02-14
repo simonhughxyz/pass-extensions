@@ -16,3 +16,11 @@ package() {
 encrypt() {
     gpg -e -r "$gpg_id"
 }
+
+
+case "$1" in
+    -p|--plain) shift; package > ./ ;;
+    -e|--encrypt) shift; package | encrypt > ./ ;;
+    *) package | encrypt > ./ ;;
+esac
+exit 0
